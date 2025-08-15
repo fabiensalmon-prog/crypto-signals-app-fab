@@ -1,5 +1,5 @@
 import pandas as pd, os
-from .ccxt_client import build_exchange
+from ccxt_client import build_exchange
 def fetch_ohlcv(exchange_name: str, symbol: str, timeframe: str = '1h', limit: int = 2000):
     ex = build_exchange(exchange_name)
     data = ex.fetch_ohlcv(symbol, timeframe=timeframe, limit=limit)
