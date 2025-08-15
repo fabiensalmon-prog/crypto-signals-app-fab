@@ -1,9 +1,9 @@
 import streamlit as st, yaml, os, math
 import pandas as pd
-from src.data.loader import load_or_fetch
-from src.strategies import ALL
-from src.risk.levels import adaptive_levels, risk_position_size
-from src.journal.db import add_trade, list_trades, update_trade_result, init_db
+from loader import load_or_fetch
+from strategies import ALL
+from levels import adaptive_levels, risk_position_size
+from journal.db import add_trade, list_trades, update_trade_result, init_db
 
 st.set_page_config(page_title='Crypto Signals — Mobile Deploy', layout='centered', initial_sidebar_state='collapsed')
 cfg = yaml.safe_load(open('configs/default.yml'))
